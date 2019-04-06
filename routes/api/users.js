@@ -54,7 +54,7 @@ router.post('/login', (req, res) => {
                         }
                         jwt.sign(
                             payload,
-                            "somesecret",
+                            require('../../config/keys').secretOrKey,
                             {expiresIn: 3600},
                             (err, token) => {
                                 if(err) throw err;

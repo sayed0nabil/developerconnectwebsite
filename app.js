@@ -13,7 +13,7 @@ const users   = require('./routes/api/users'),
 const app = express(),
       port  = process.env.PORT || 4000,
     //   mongodbURI = 'mongodb+srv://seko:seko@mernstackfronttoback-qiptm.mongodb.net/test?retryWrites=true';
-         mongodbURI = require('./config/keys').localMongoURI;
+         mongodbURI = require('./config/keys').MONGO_URI;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors());
