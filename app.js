@@ -4,6 +4,7 @@ const express = require('express'),
       mongoose = require('mongoose'),
       bodyParser = require('body-parser'),
       cors       = require('cors'),
+      path       = require('path'),
       passport   = require('passport');
 // Routes
 const users   = require('./routes/api/users'),
@@ -27,4 +28,11 @@ require('./authentication/passport')(passport);
 app.use('/api/users', users);
 app.use('/api/profile', profile);
 app.use('/api/posts', posts);
+
+if(process.env.NODE_ENV === 'producation'){
+    app.use(express.static('client/build'));
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    });
+}
 app.listen(port, () => console.log(`listening on port ${port}`));
