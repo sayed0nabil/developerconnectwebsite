@@ -11,7 +11,7 @@ const users   = require('./routes/api/users'),
       posts   = require('./routes/api/posts');
 // Default Settings
 const app = express(),
-      port  = process.env.PORT || 5000,
+      port  = process.env.PORT || 4000,
     //   mongodbURI = 'mongodb+srv://seko:seko@mernstackfronttoback-qiptm.mongodb.net/test?retryWrites=true';
          mongodbURI = require('./config/keys').MONGO_URI;
 app.use(bodyParser.json());
@@ -24,6 +24,7 @@ mongoose
 app.use(passport.initialize());
 require('./authentication/passport')(passport);
 // Routes
+console.log(process.env.PORT);
 app.use('/api/users', users);
 app.use('/api/profile', profile);
 app.use('/api/posts', posts);
