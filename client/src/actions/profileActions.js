@@ -116,7 +116,7 @@ export const getProfiles = () => dispatch => {
         })
     })
     .catch(err => {
-        console.log('Fuck');
+        console.log(err);
         dispatch({
             type: 'GET-ERRORS',
             payload: err.response.data
