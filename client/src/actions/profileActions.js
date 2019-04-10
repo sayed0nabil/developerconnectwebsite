@@ -1,7 +1,6 @@
 
 
 import axios from 'axios';
-import setAuthToken from '../utils/setAuthToken';
 import { logoutUser } from './authAction';
 
 export const getCurrentProfile = () => dispatch => {
@@ -108,7 +107,6 @@ export const removeEducation = (id) => dispatch => {
     })
 }
 export const getProfiles = () => dispatch => {
-    
     axios.get('http://localhost:4000/api/profile/all')
     .then(result => {
         dispatch({
