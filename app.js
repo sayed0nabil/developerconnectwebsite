@@ -11,7 +11,8 @@ const users   = require('./routes/api/users'),
       posts   = require('./routes/api/posts');
 // Default Settings
 const app = express(),
-      port  = process.env.PORT || 4000,
+      port  =  5000,
+      // process.env.PORT ||
     //   mongodbURI = 'mongodb+srv://seko:seko@mernstackfronttoback-qiptm.mongodb.net/test?retryWrites=true';
          mongodbURI = require('./config/keys').MONGO_URI;
 app.use(bodyParser.json());
