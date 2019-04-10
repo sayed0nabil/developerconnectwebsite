@@ -108,6 +108,7 @@ export const removeEducation = (id) => dispatch => {
     })
 }
 export const getProfiles = () => dispatch => {
+    
     axios.get('http://localhost:5000/api/profile/all')
     .then(result => {
         dispatch({
