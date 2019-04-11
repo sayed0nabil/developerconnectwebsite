@@ -14,7 +14,7 @@ class Landing extends Component{
         minHeight: '86vh'
       }}>
         <div 
-        className='landing-layout'>
+        className='landing-layout text-primary'>
           Developer Connection Website
         </div>
       </div>

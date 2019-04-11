@@ -9,6 +9,7 @@
 }
 .landing-layout{
     display: grid;
+    font-size: 60px;
     justify-content: center;
     align-items: center;
     position: absolute;
