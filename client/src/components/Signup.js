@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { withRouter } from 'react-router-dom';
-import classnames from 'classnames';
 import { connect } from 'react-redux';
 import {registerUser } from '../actions/authAction';
-import authReducer from '../reducers/authReducer';
 // Common Components
 import TextFieldGroup from './common/TextFieldGroup';
 class Signup extends Component {

@@ -4,7 +4,7 @@ import axios from 'axios';
 import { logoutUser } from './authAction';
 
 export const getCurrentProfile = () => dispatch => {
-    axios.get(`http://localhost:4000/api/profile`)
+    axios.get(`/api/profile`)
     .then( result => {
         dispatch({
             type: 'GET_PROFILE',
@@ -25,7 +25,7 @@ export const clearProfile = () => {
     }
 }
 export const createProfile = (profile, history) => dispatch => {
-    axios.post('http://localhost:4000/api/profile/createprofile', profile)
+    axios.post('/api/profile/createprofile', profile)
     .then(result => {
         history.push('/dashboard');
     })
@@ -38,7 +38,7 @@ export const createProfile = (profile, history) => dispatch => {
 }
 export const deleteAccount = () => dispatch => {
     if(window.confirm('Are you sure that you want to delete account ?')){
-        axios.get('http://localhost:4000/api/profile/delete')
+        axios.get('/api/profile/delete')
         .then(result => {
             dispatch(logoutUser());
         }).catch(err => {
@@ -51,7 +51,7 @@ export const deleteAccount = () => dispatch => {
 }
 
 export const addExperience = (experience, history) => dispatch => {
-    axios.post('http://localhost:4000/api/profile/addexperience', experience)
+    axios.post('/api/profile/addexperience', experience)
     .then(result => {
         dispatch({
             type: 'GET_PROFILE',
@@ -71,7 +71,7 @@ export const addExperience = (experience, history) => dispatch => {
     });
 }
 export const addEducation = (education, history) => dispatch => {
-    axios.post('http://localhost:4000/api/profile/addeducation', education)
+    axios.post('/api/profile/addeducation', education)
     .then(result => {
         history.push('/dashboard');
     })
@@ -83,7 +83,7 @@ export const addEducation = (education, history) => dispatch => {
     })
 }
 export const removeExperience = (id) => dispatch => {
-    axios.get(`http://localhost:4000/api/profile/removeexperience/${id}`)
+    axios.get(`/api/profile/removeexperience/${id}`)
     .then(result => {
         dispatch(getCurrentProfile());
     }) 
@@ -95,7 +95,7 @@ export const removeExperience = (id) => dispatch => {
     })
 }
 export const removeEducation = (id) => dispatch => {
-    axios.get(`http://localhost:4000/api/profile/removeeducation/${id}`)
+    axios.get(`/api/profile/removeeducation/${id}`)
     .then(result => {
         dispatch(getCurrentProfile());
     }) 
@@ -107,7 +107,7 @@ export const removeEducation = (id) => dispatch => {
     })
 }
 export const getProfiles = () => dispatch => {
-    axios.get('https://devprofilesapp.herokuapp.com/api/profile/all')
+    axios.get('/api/profile/all')
     .then(result => {
         dispatch({
             type: 'GET_PROFILES',

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // GET All Posts
 export const getPosts = () => dispatch => {
-    axios.get('http://localhost:4000/api/posts/')
+    axios.get('/api/posts/')
     .then( result => {
         dispatch({
             type: 'GET-ERRORS',
@@ -23,7 +23,7 @@ export const getPosts = () => dispatch => {
 }
 export const addPost = (post, history) => dispatch => {
     console.log('Post', post);
-    axios.post('http://localhost:4000/api/posts/createpost', post)
+    axios.post('/api/posts/createpost', post)
     .then( result => {
         dispatch({
             type: 'GET-ERRORS',
@@ -39,7 +39,7 @@ export const addPost = (post, history) => dispatch => {
     })
 }
 export const getPost = postId => dispatch => {
-    axios.get(`http://localhost:4000/api/posts/${postId}`)
+    axios.get(`/api/posts/${postId}`)
     .then(post => {
         dispatch({
             type: 'GET_POST',
@@ -58,7 +58,7 @@ export const getPost = postId => dispatch => {
     })
 }
 export const deletePost = postId => dispatch => {
-    axios.delete(`http://localhost:4000/api/posts/${postId}`)
+    axios.delete(`/api/posts/${postId}`)
     .then( post => {
         dispatch({
             type: 'GET-ERRORS',
@@ -74,7 +74,7 @@ export const deletePost = postId => dispatch => {
     })
 }
 export const likePost = postId => dispatch => {
-    axios.post(`http://localhost:4000/api/posts/like/${postId}`)
+    axios.post(`/api/posts/like/${postId}`)
     .then(result => {
         dispatch({
             type:'GET_POST',
@@ -89,7 +89,7 @@ export const likePost = postId => dispatch => {
     })
 }
 export const unlikePost = postId => dispatch => {
-    axios.post(`http://localhost:4000/api/posts/unlike/${postId}`)
+    axios.post(`/api/posts/unlike/${postId}`)
     .then(result => {
         dispatch({
             type:'GET_POST',
@@ -104,7 +104,7 @@ export const unlikePost = postId => dispatch => {
     })
 }
 export const addComment = (postId, comment) => dispatch => {
-    axios.post(`http://localhost:4000/api/posts/comment/${postId}`, comment)
+    axios.post(`/api/posts/comment/${postId}`, comment)
     .then(result => {
         dispatch({
             type:'GET_POST',
@@ -119,7 +119,7 @@ export const addComment = (postId, comment) => dispatch => {
     })
 }
 export const deleteComment = (postId, commentId) => dispatch => {
-    axios.delete(`http://localhost:4000/api/posts/comment/${postId}/${commentId}`)
+    axios.delete(`/api/posts/comment/${postId}/${commentId}`)
     .then(result => {
         dispatch({
             type:'GET_POST',
