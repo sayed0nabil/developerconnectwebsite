@@ -149,7 +149,7 @@ class CreateProfile extends Component {
             type='text'
             errors={this.state.errors}
             id='skills_id'
-            placeholder='Enter Skills'
+            placeholder='Like: HTML,CSS'
             name='skills'
             />
           <TextFieldGroup

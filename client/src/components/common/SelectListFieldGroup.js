@@ -18,7 +18,7 @@ function SelectListFieldGroup({
         className='form-control'
         onChange={changeStatus}
         id={id}
-        defaultValue={value}>
+        value={value}>
         {options}
         </select>
         {errors[name]?(
