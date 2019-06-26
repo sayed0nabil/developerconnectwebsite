@@ -23,6 +23,7 @@ import PrivateRoute from './components/common/PrivateRoute';
 import EditProfile from './components/editprofile/EditProfile';
 import AddExperience from './components/addcredentials/AddExperience';
 import AddEducation from './components/addcredentials/AddEducation';
+import PostDetails from './components/post/PostDetails';
 if(localStorage.jwttoken){
   setAuthToken(localStorage.jwttoken);
   const decoded = jwt_decode(localStorage.jwttoken);
@@ -54,6 +55,7 @@ class App extends Component {
               <PrivateRoute exact path='/addeducation' component={AddEducation} />
               <PrivateRoute exact path='/addpost' component={PostForm} />
               <PrivateRoute exact path='/posts' component={Posts} />
+              <PrivateRoute exact path='/post/:post_id' component={PostDetails} />
             </Switch>
           </Switch>
           <Footer />

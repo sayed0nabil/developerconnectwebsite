@@ -116,7 +116,7 @@ render(){
         }}>
           <img 
           src={suitperson} 
-          alt='User Image' 
+          alt='User_image' 
           width='30px'
           height='30px'
           className='mr-2' />
@@ -139,11 +139,11 @@ render(){
                     ): (<i className="fas fa-thumbs-up mr-2 text-primary"></i>)}
                     <span>{post.likes.length}</span>
                 </button>
-                <button 
-                onClick={this.commentClicked}
+                <Link 
+                to={`/post/${post._id}`}
                 className="comments btn btn-secondary text-center col-md-3 mr-1 p-2">
                         Comments
-                </button>
+                </Link>
                 {auth.user.id === post.user._id?(
                     <button 
                     onClick={this.deletePost}

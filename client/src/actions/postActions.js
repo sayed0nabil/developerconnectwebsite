@@ -40,10 +40,10 @@ export const addPost = (post, history) => dispatch => {
 }
 export const getPost = postId => dispatch => {
     axios.get(`/api/posts/${postId}`)
-    .then(post => {
+    .then(response => {
         dispatch({
             type: 'GET_POST',
-            payload: post
+            payload: response.data
         })
         dispatch({
             type: 'GET-ERRORS',
@@ -51,6 +51,7 @@ export const getPost = postId => dispatch => {
         })
     })
     .catch(err => {
+        console.log(err)
         dispatch({
             type: 'GET-ERRORS',
             payload: err.response.data
@@ -104,17 +105,19 @@ export const unlikePost = postId => dispatch => {
     })
 }
 export const addComment = (postId, comment) => dispatch => {
-    axios.post(`/api/posts/comment/${postId}`, comment)
+    axios.post(`/api/posts/comment/${postId}`, {text:comment})
     .then(result => {
+        console.log(result);
         dispatch({
             type:'GET_POST',
             payload: result.data
         })
     })
     .catch(err => {
+        console.log(err);
         dispatch({
             type: 'GET-ERRORS',
-            payload: err.response.data
+            payload: err.response.data?err.response.data:err
         })
     })
 }

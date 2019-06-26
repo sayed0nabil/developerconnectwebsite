@@ -27,6 +27,11 @@ router.get('/', (req, res) => {
 // @access public
 router.get('/:postid', (req, res) => {
     Post.findById(req.params.postid)
+    .populate('user', ['name', 'email'])
+    .populate({
+        path: 'comments.user',
+        select: ['name', 'email']
+    })
     .then(post => {
         if(post){
             res.send(post)
@@ -183,7 +188,8 @@ router.delete('/comment/:postid/:comment_id', passport.authenticate('jwt', { ses
         if(post){
             const commentIndex = post.comments.findIndex(item => String(item._id) === req.params.comment_id);
             if(commentIndex !== -1){
-                if(String(post.comments[commentIndex].user._id) === req.user.id){
+                if(String(post.comments[commentIndex].user._id) === req.user.id ||
+                   String(req.user.id) === String(post.user._id)){
                     post.comments.splice(commentIndex, 1);
                     post.save().then(post => res.send(post))
                     .catch(err => res.status(400).send(err));
