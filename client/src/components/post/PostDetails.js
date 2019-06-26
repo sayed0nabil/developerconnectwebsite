@@ -72,7 +72,7 @@ class PostDetails extends Component {
                                    position: 'relative'
                                }}
                                >
-                               <span className='ml-5 lead'>{comment.text}</span>
+                               <pre className='ml-5 lead'>{comment.text}</pre>
                                {String(this.props.user.id)===String(comment.user._id) ||
                                String(this.props.user.id) === String(post.user._id)?
                                 <button 

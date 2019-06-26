@@ -121,11 +121,11 @@ render(){
           height='30px'
           className='mr-2' />
           <Link to={`/posts`}>{post.name}</Link>
-          <p
+          <pre
           className='lead'
           style={{
               textIndent: '50px'
-          }}>{post.text}</p>
+          }}>{post.text}</pre>
           <div className="row pl-5">
             <div className='actions col-md-10'>
                 <button 
