@@ -35,10 +35,7 @@ class Login extends Component {
   render() {
     const { errors } = this.state;
     return (
-        <div className='custom-container'
-        style={{
-          minHeight: '86vh'
-        }}>
+        <div className='custom-container'>
         <form className='w-50 mx-auto' onSubmit={this.submit}>
         <div className="form-group">
           <label htmlFor="email">Email address</label>

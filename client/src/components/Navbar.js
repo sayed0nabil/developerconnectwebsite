@@ -13,25 +13,25 @@ class Navbar extends Component {
     let dynamicLinks = !auth.isAuthenticated?(
         <React.Fragment>
             <li className="nav-item">
-            <NavLink className="nav-link" to="/login">Login</NavLink>
+                <NavLink  className="nav-link" exact to="/login">Login</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link" to="/signup">Signup</NavLink>
+                <NavLink  className="nav-link" exact to="/signup">Signup</NavLink>
             </li>
         </React.Fragment>
     ):(
         <React.Fragment>
             <li className="nav-item">
-                <NavLink className="nav-link" to="/posts">Posts</NavLink>
+                <NavLink  className="nav-link" exact to="/posts">Posts</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link" to="/addpost">Add Post</NavLink>
+                <NavLink  className="nav-link" exact to="/addpost">Add Post</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link" to="/dashboard">Dashboard</NavLink>
+                <NavLink  className="nav-link" exact to="/dashboard">Dashboard</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link" to="/" onClick={this.logout}>
+                <NavLink  className="nav-link" exact to="/" onClick={this.logout}>
                 <img 
                 src={dummyImage}
                 alt='dummy person'
@@ -46,11 +46,8 @@ class Navbar extends Component {
         </React.Fragment>
     )
     return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark"
-    style={{
-        height: '10vh'
-    }}>
-    <Link className="navbar-brand" exact="true" to="/">Main Page</Link>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <Link className="navbar-brand" exact="true" to="/">Connect</Link>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
     </button>
@@ -58,7 +55,7 @@ class Navbar extends Component {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mx-auto">
         <li className="nav-item">
-            <NavLink className="nav-link" to="/profiles">Profiles</NavLink>
+            <NavLink  className="nav-link" exact  to="/profiles">Profiles</NavLink>
         </li>
         {dynamicLinks}
         </ul>

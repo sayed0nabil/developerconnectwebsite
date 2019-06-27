@@ -1,1 +1,8 @@
 
+
+.navbar-brand{
+    font-family: 'Rubik Mono One', sans-serif;
+}
+.bg-dark{
+    background: black !important;
+}

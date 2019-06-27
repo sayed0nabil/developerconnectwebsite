@@ -42,7 +42,7 @@ class App extends Component {
           <React.Fragment>
           <Navbar />
           <div style={{
-            minHeight: '85vh'
+            minHeight: '86vh'
           }}>
           <Switch>
             <Route exact path='/' component={Landing}      /> 
