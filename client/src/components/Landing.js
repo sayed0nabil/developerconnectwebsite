@@ -7,7 +7,8 @@ class Landing extends Component{
       <div className='landing'
       style={{
         minHeight: '87vh',
-        background: `url(${require('./images/connect.jpeg')})`
+        background: `url(${require('./images/connect.jpeg')})`,
+        backgroundSize: '100% 100%'
       }}>
         <div 
         className='landing-layout text-center text-white'>
