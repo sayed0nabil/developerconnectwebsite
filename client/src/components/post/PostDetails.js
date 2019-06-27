@@ -57,7 +57,7 @@ class PostDetails extends Component {
             <div className='post p-5'>
                 <div className="container w-75 mx-auto">
                     <Link to='/posts' >{post.name}</Link>
-                    <p className='ml-5 lead'>{post.text}</p>
+                    <pre className='ml-5 lead'>{post.text}</pre>
                     <div className="comments">
                         <hr/>
                         <h2 className="text-center"> Comments </h2>
@@ -89,7 +89,7 @@ class PostDetails extends Component {
                         ))}
                         <form 
                         onSubmit={this.addComment}>
-                            <input 
+                            <input
                             className='form-control my-1'
                             type='text' 
                             ref="comment"

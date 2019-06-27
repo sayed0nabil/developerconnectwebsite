@@ -41,6 +41,9 @@ class App extends Component {
       <BrowserRouter>
           <React.Fragment>
           <Navbar />
+          <div style={{
+            minHeight: '85vh'
+          }}>
           <Switch>
             <Route exact path='/' component={Landing}      /> 
             <Route exact path='/login' component={Login} />
@@ -58,6 +61,7 @@ class App extends Component {
               <PrivateRoute exact path='/post/:post_id' component={PostDetails} />
             </Switch>
           </Switch>
+          </div>
           <Footer />
           </React.Fragment>
       </BrowserRouter>
