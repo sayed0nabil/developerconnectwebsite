@@ -69,7 +69,7 @@ render(){
                    }}
                    to='anything' className=''>{item.user.name}</Link>
                    <span className='col-md-auto'>{item.text}</span>
-                   {auth.user.id == item.user._id?(
+                   {auth.user.id === item.user._id?(
                        <button
                        style={{
                            height: '40px'

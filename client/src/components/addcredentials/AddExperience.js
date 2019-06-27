@@ -48,15 +48,17 @@ class AddExperience extends Component {
     <div className='addexperience'>
         <div className='container'>
             <div className="row">
-            <div className='col-md-8 m-auto'>
+            <div className='col-md-12 m-auto'>
             <p className="lead text-center">
                 Enter any job or position you take it in the past or current
             </p>
             <form 
+            className='custom-form'
             onSubmit={this.submit}
             
             >
-                <h2 className='text-center text-info'>Add Experience</h2>
+                <h2 className='text-center'>Add Experience</h2>
+                <hr/>
                 <TextFieldGroup
                 label='Title: '
                 type='text'
@@ -128,7 +130,7 @@ class AddExperience extends Component {
                 placeholder='Enter Description'
                 value={state.description}
                 />
-            <input type='submit' value='Add Experience' className='btn btn-success btn-block' />
+            <button type='submit' className='btn btn-success btn-block'>Add Experience</button>
             </form>
             </div>
         </div>

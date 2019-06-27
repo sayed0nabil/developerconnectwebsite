@@ -37,10 +37,11 @@ class Signup extends Component {
 }
   render() {
     return (
-        <form className='container'
-        style={{
-          minHeight: '83.5vh'
-        }} onSubmit={this.submit}>
+        <div className='container'>
+        <form className='custom-form' onSubmit={this.submit}>
+        <h2
+        className="text-center">Signup Form</h2>
+        <hr/>
         <TextFieldGroup 
         label='name'
         type='text'
@@ -79,6 +80,7 @@ class Signup extends Component {
         />
         <button type="submit" className="btn btn-success w-100">Register</button>
       </form>
+      </div>
     )
   }
 }

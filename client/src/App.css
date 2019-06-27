@@ -1,8 +1,18 @@
-
-
+#root{
+    position: relative;
+}
 .navbar-brand{
     font-family: 'Rubik Mono One', sans-serif;
 }
 .bg-dark{
     background: black !important;
+}
+
+.footer {
+    position: absolute;
+    margin-top: 20px;
+    bottom: 0;
+    width:100%;
+    z-index: 99999;
+    background :transparent;
 }

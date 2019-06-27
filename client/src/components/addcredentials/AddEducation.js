@@ -45,11 +45,13 @@ class AddEducation extends Component {
 <div className='addeducation'>
     <div className='container'>
         <div className='row'>
-            <div className='col-md-8 m-auto'>
+            <div className='col-md-12 m-auto'>
             <p className="lead text-center">Add any eduaction you got in past years or now</p>
-            <h2 className="text-center text-success">Add Education</h2>
             <form 
+            className='custom-form'
             onSubmit={this.submit}>
+                <h2 className="text-center">Add Education</h2>
+                <hr/>
                 <TextFieldGroup
                 errors={state.errors}
                 id='school_id'
@@ -118,7 +120,7 @@ class AddEducation extends Component {
                 placeholder='Enter Description'
                 value={state.description}
                 />
-                <input type='submit' className='btn btn-success btn-block' value='Add Education' />
+                <button type='submit' className='btn btn-success btn-block'>Add Education</button>
             </form>
             </div>
         </div>

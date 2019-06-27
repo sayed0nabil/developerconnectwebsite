@@ -1,5 +1,4 @@
 import React from 'react';
-import classnames from 'classnames';
 function SelectListFieldGroup({
     errors,
     id,
@@ -12,7 +11,7 @@ function SelectListFieldGroup({
   const options = values.map(item => (<option key={item.label} value={item.value}>{item.label}</option>))
   return (
     <div className='row my-3'>
-    <div className="form-group col-md-8 m-auto">
+    <div className="form-group col-md-12 m-auto">
        <label>{label}</label>
         <select 
         className='form-control'

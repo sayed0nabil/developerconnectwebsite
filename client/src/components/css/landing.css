@@ -2,7 +2,7 @@
 
 .landing{
     position: relative;
-    height: 68vh;
+    /* height: 100vh; */
 }
 .landing-layout{
     font-size: 60px;

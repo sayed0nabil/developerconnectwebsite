@@ -35,9 +35,13 @@ class Login extends Component {
   render() {
     const { errors } = this.state;
     return (
-        <div className='custom-container'>
-        <form className='w-50 mx-auto' onSubmit={this.submit}>
-        <div className="form-group">
+        <div className='container'>
+        <form className='custom-form' onSubmit={this.submit}>
+          <h2
+          className="text-center">Login Form</h2>
+          <hr/>
+        <div 
+        className="form-group">
           <label htmlFor="email">Email address</label>
           <input 
           type="email" 
@@ -68,7 +72,11 @@ class Login extends Component {
              <small id="emailHelp" className="form-text text-danger">{errors.password}</small>
            ):null}
         </div>
-        <button type="submit" className="btn btn-primary w-100">Login</button>
+        <button 
+        style={{
+          fontSize: '25px'
+        }}
+        type="submit" className="btn btn-primary w-100">Login</button>
       </form>
       </div>
     )

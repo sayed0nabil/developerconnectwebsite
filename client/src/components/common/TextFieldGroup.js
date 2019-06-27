@@ -12,8 +12,7 @@ function TextFieldGroup({
     onchange
 }) {
   return (
-    <div className='row my-3'>
-    <div className="form-group col-md-8 m-auto">
+    <div className="form-group">
         <label htmlFor={label}>{label[0].toUpperCase() + label.slice(1, label.length)}</label>
         <input 
         type={type}
@@ -33,7 +32,6 @@ function TextFieldGroup({
             {errors[name]}
         </small>
         ):null}
-  </div>
   </div>
   )
 }

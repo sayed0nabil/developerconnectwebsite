@@ -38,7 +38,8 @@ class Navbar extends Component {
                 style={{
                     width: "30px",
                     height: "30px",
-                    borderRadius: "50%"
+                    borderRadius: "50%",
+                    marginRight: '5px'
                 }} />
                 logout
                 </NavLink>
@@ -46,7 +47,8 @@ class Navbar extends Component {
         </React.Fragment>
     )
     return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div className='container'>
         <Link className="navbar-brand" exact="true" to="/">Connect</Link>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
@@ -59,6 +61,7 @@ class Navbar extends Component {
         </li>
         {dynamicLinks}
         </ul>
+        </div>
         </div>
     </nav>
     )

@@ -9,7 +9,7 @@ function TextAreaFieldGroup({
 }) {
   return (
     <div className='row my-3'>
-    <div className="form-group col-md-8 m-auto">
+    <div className="form-group col-md-8">
         <textarea 
         className= {classnames("form-control", {
         'is-invalid': errors[name],

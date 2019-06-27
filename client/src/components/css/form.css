@@ -1,0 +1,25 @@
+
+
+.custom-form{
+    width: 70%;
+    margin: 40px auto;
+    padding: 15px 25px;
+    background: #222222;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Special Elite', cursive;
+}
+
+.custom-form button{
+    font-size: 25px !important
+}
+.custom-form hr{
+    background: white
+}
+.custom-form  input {
+    font-family: arial;
+}
+.custom-form .form-text{
+    text-indent: 10px;
+}

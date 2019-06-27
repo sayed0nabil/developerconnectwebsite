@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {Link} from 'react-router-dom';
 import './css/landing.css';
 class Landing extends Component{
   render(){
     return (
       <div className='landing'
       style={{
-        minHeight: '86vh',
+        minHeight: '87vh',
         background: `url(${require('./images/connection.jpg')})`
       }}>
         <div 

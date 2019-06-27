@@ -104,14 +104,11 @@ class CreateProfile extends Component {
       </div>
     ): null;
     return (
+      <div className='container'>
       <form 
       onSubmit={this.submit}
-      className='container'>
-        <div className='row'>
-          <div className='col-md-8 m-auto'>
-            <h2 className='text-center text-muted mt-2'>Create Your Profile</h2>
-          </div>
-        </div>
+      className='custom-form'>
+        <h2 className="text-center">Create Your Own Profile</h2>
           <TextFieldGroup
             label='handle'
             type='text'
@@ -187,8 +184,9 @@ class CreateProfile extends Component {
             </button>
           </div>
             {socialInputs}
-            <input type="submit" value="Create Profile" className="btn btn-info btn-block mt-4"/>
+            <button type="submit" className="btn btn-info btn-block mt-4">Create Profile</button>
       </form>
+      </div>
     )
   }
 }

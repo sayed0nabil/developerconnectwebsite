@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { getPosts } from '../../actions/postActions';
 import Loading from '../common/Loading';
 import PostItem from './PostItem';
-import suitperson from '../suitperson.jpg';
 class Posts extends Component {
   constructor(props){
       super(props);

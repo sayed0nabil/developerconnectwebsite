@@ -3,6 +3,7 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import { Provider } from 'react-redux';
 import './App.css';
+import './components/css/form.css'
 // Custom components
 import store  from './store';
 import Navbar from './components/Navbar';
@@ -39,11 +40,13 @@ class App extends Component {
     return (
       <Provider store={store}>
       <BrowserRouter>
-          <React.Fragment>
+          <div
+          style={{
+            minHeight: '100vh',
+            overflow: 'hidden'
+          }}
+          >
           <Navbar />
-          <div style={{
-            minHeight: '86vh'
-          }}>
           <Switch>
             <Route exact path='/' component={Landing}      /> 
             <Route exact path='/login' component={Login} />
@@ -61,9 +64,8 @@ class App extends Component {
               <PrivateRoute exact path='/post/:post_id' component={PostDetails} />
             </Switch>
           </Switch>
-          </div>
           <Footer />
-          </React.Fragment>
+          </div>
       </BrowserRouter>
       </Provider>
     );
