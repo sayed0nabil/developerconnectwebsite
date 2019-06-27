@@ -7,15 +7,16 @@ class Landing extends Component{
       <div className='landing'
       style={{
         minHeight: '87vh',
-        background: `url(${require('./images/connect.jpeg')})`,
-        backgroundSize: '100% 100%'
+        background: `url(${require('./images/connect.jpeg')}) no-repeat center center`
       }}>
         <div 
         className='landing-layout text-center text-white'>
           <div 
-          className='container'
+          className='container w-75 p-4'
           style={{
-            margin: '110px auto'
+            margin: '110px auto',
+            background: 'rgba(255, 255, 255, .1)',
+            borderRadius: '10px'
           }}>
             <h1 
             style={{
@@ -28,7 +29,7 @@ class Landing extends Component{
             style={{
               fontWeight: 'bold'
             }}
-            className='lead bg-dark p-2'>You can create you own profile and other developers see it also you can create you own posts and comments</p>
+            className='lead p-2'>You can create you own profile and other developers see it also you can create you own posts and comments</p>
           </div>
         </div>
       </div>

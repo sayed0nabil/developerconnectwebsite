@@ -1,6 +1,9 @@
 #root{
     position: relative;
 }
+*{
+    box-sizing: border-box;
+}
 .navbar-brand{
     font-family: 'Rubik Mono One', sans-serif;
 }
@@ -10,7 +13,6 @@
 
 .footer {
     position: absolute;
-    margin-top: 20px;
     bottom: 0;
     width:100%;
     z-index: 99999;

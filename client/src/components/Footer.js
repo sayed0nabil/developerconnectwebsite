@@ -2,7 +2,8 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <div style={{
+    <div 
+    style={{
       padding: '15px 0'
     }}
     className='bg-dark text-white text-center footer'>
