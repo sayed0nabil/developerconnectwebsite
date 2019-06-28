@@ -6,6 +6,7 @@ class Landing extends Component{
     return (
       <div className='landing'
       style={{
+        height: 'calc( 100vh - (56px + 54px ) )',
         background: `url(${require('./images/connect.jpeg')}) no-repeat center center`
       }}>
         <div 
