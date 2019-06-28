@@ -47,6 +47,9 @@ class App extends Component {
           }}
           >
           <Navbar />
+          <div style={{
+            minHeight: 'calc(100vh - (56px + 54px) )'
+          }}>
           <Switch>
             <Route exact path='/' component={Landing}      /> 
             <Route exact path='/login' component={Login} />
@@ -64,6 +67,7 @@ class App extends Component {
               <PrivateRoute exact path='/post/:post_id' component={PostDetails} />
             </Switch>
           </Switch>
+          </div>
           <Footer />
           </div>
       </BrowserRouter>
