@@ -3,9 +3,9 @@
 .landing{
     position: relative;
     /* height: 100vh; */
+    font-size: 60px;
 }
 .landing-layout{
-    font-size: 60px;
     position: absolute;
     top: 0;
     left: 0;

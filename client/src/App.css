@@ -10,3 +10,9 @@
 .bg-dark{
     background: black !important;
 }
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

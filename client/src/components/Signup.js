@@ -37,7 +37,15 @@ class Signup extends Component {
 }
   render() {
     return (
-        <div className='container'>
+      <div className=''
+      style={{
+        minHeight: 'calc( 100vh - 54px  )',
+        background: `url(${require('./images/connect.jpeg')}) no-repeat center center`
+      }}>
+        <div 
+        className='landing-layout flex-center text-white'>
+          <div 
+          className='container w-75 p-4 flex-center'>
         <form className='custom-form' onSubmit={this.submit}>
         <h2
         className="text-center">Signup Form</h2>
@@ -80,6 +88,8 @@ class Signup extends Component {
         />
         <button type="submit" className="btn btn-success w-100">Register</button>
       </form>
+      </div>
+      </div>
       </div>
     )
   }

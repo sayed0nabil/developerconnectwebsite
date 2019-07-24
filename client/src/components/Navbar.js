@@ -47,7 +47,13 @@ class Navbar extends Component {
         </React.Fragment>
     )
     return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav style={{
+        position: 'fixed',
+        width: '100%',
+        top: '0',
+        left: '0',
+        zIndex: '99999'
+    }} className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className='container'>
         <Link className="navbar-brand" exact="true" to="/">Connect</Link>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

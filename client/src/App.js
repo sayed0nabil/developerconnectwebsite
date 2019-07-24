@@ -48,7 +48,8 @@ class App extends Component {
           >
           <Navbar />
           <div style={{
-            minHeight: 'calc(100vh - (56px + 54px) )'
+            // minHeight: 'calc(100vh -  54px )',
+            marginTop: '56px'
           }}>
           <Switch>
             <Route exact path='/' component={Landing}      /> 
