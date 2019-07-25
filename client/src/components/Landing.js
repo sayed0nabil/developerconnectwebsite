@@ -12,7 +12,7 @@ class Landing extends Component{
         <div 
         className='landing-layout text-center text-white'>
           <div 
-          className='container w-75 p-4'
+          className='container p-4'
           style={{
             margin: '110px auto',
             background: 'rgba(255, 255, 255, .1)',

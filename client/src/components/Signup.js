@@ -45,8 +45,8 @@ class Signup extends Component {
         <div 
         className='landing-layout flex-center text-white'>
           <div 
-          className='container w-75 p-4 flex-center'>
-        <form className='custom-form' onSubmit={this.submit}>
+          className='container flex-center'>
+        <form className='custom-form col-md-8 p-4' onSubmit={this.submit}>
         <h2
         className="text-center">Signup Form</h2>
         <hr/>

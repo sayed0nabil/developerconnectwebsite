@@ -43,8 +43,8 @@ class Login extends Component {
         <div 
         className='landing-layout flex-center text-white'>
           <div 
-          className='container w-75 p-4 flex-center'>
-      <form className='custom-form p-5' onSubmit={this.submit}>
+          className='container flex-center'>
+      <form className='custom-form col-md-8 p-5' onSubmit={this.submit}>
       <h2
       className="text-center">Login Form</h2>
       <hr/>
